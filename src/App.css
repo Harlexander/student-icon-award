@@ -1,5 +1,5 @@
 .landing{
-    background: url("./images/ALOGO.jpg") no-repeat center;
+    background: url("./images/napps.jpeg") no-repeat center;
     height: 700px;
 }
 .inner{
@@ -28,7 +28,7 @@
   }
 @media only screen and (max-width: 600px) {
     .landing{
-        background: url("./images/ALOGO.jpg") center;
+        background: url("./images/napps.jpeg") center;
         background-repeat: no-repeat;
         background-size: cover;
         height : 300px

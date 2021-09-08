@@ -43,7 +43,7 @@ function SubCategory({list}) {
     return (
       <>
       <Vote show={show} handleClose={handleClose} contestant={contestant} onChange={updateVote} onChang={updateEmail} collection={currentPerson}/>
-      {/* <NavBar list={list}/> */}
+      <NavBar list={list}/>
     <div className="px-0 mx-0 landing">
         <div className="inner">
             <br/>

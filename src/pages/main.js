@@ -13,7 +13,7 @@ function Main({nominees}) {
   }, [])
   return (
     <>
-    {/* <NavBar list={nominees}/> */}
+    <NavBar list={nominees}/>
     <LAndingPage/>
     <Categories list={nominees}/>
     <Credits/>
