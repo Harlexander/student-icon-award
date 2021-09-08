@@ -1,0 +1,80 @@
+.landing{
+    background: url("./images/ALOGO.jpg") no-repeat center;
+    height: 700px;
+}
+.inner{
+    background: rgba(28, 29, 27, 0.7);
+    height: 100%;
+    color: rgb(253, 253, 253);
+    padding : 250px
+}
+.inner-text{
+    font-size : 80px;
+    font-weight : lighter
+}
+.underline{
+    display:inline-block;
+    position:relative;
+    
+  }
+  .underline::after{
+    content:'';
+    height:4px;
+    width:30%;
+    background:rgb(3, 16, 88);
+    position:absolute;
+    left:calc(50% - 10%);
+    bottom:-5px;
+  }
+@media only screen and (max-width: 600px) {
+    .landing{
+        background: url("./images/ALOGO.jpg") center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height : 300px
+    }
+    .nnn{
+      background-color: rgb(255, 255, 255);
+    }
+    .nav-head{
+      font-weight: bold;
+      font-size: larger;
+    }
+    .inner-text{
+        font-size : 40px;
+        font-weight : lighter
+    }
+    .inner{
+        padding: 150px 30px;
+    }
+  }
+  .profile-dot {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    background-color: lightgray;
+  }
+  
+  .profile-dot span {
+    font-weight: 700;
+    font-size: 100px;
+    color: #fff;
+    font-style: normal;
+  }
+/* .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+} */
