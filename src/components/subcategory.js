@@ -4,6 +4,7 @@ import { useRouteMatch } from 'react-router';
 import Paystack from './../paystack/paystack';
 import {firestore, fb} from './../firebase/firebase'
 import NavBar from './navbar';
+import Credits from './credits';
 function SubCategory({list}) {
     const [show, setShow] = useState(false);
     const [contestant, setContestant] = useState({});
@@ -55,6 +56,7 @@ function SubCategory({list}) {
     <div className="d-flex flex-row flex-wrap justify-content-center">
     {result.map((details, index) => {
         const name = Object.keys(details)[0]
+        const school = Object.values(details)[0]
             return (
                 <Card style={{ width: '18rem' }} key={index} className="mx-4 mb-3">
                   <Card.Header className="p-0">
@@ -64,6 +66,7 @@ function SubCategory({list}) {
                     </Card.Header>
                 <Card.Body>
                     <Card.Title className="text-capitalize">{name}</Card.Title>
+                    <p className="text-capitalize">{school}</p>
                     <Button variant="primary" onClick={() => handleShow({name : name})}>
                     Vote Here
                     </Button>
@@ -73,6 +76,7 @@ function SubCategory({list}) {
        })}
     </div>
   </div> 
+  <Credits/>
   </>
   );
 }

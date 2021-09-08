@@ -6,13 +6,13 @@ import {firestore, fb} from './../firebase/firebase'
 const AddContestant = () => {
     const [state, setState] = useState({
         name : "",
-        description : "",
+        school : "",
         category : ''
     });
     const addContestant = (e) => {
         e.preventDefault()
         firestore.collection("Contestants").doc(state.category.toUpperCase()).set({
-            [state.name.toUpperCase()] :  0}, {merge : true})
+            [state.name.toUpperCase()] :  state.school}, {merge : true})
                 .then(window.alert("added suceesfully"))
      }
     const handlechanges = (e) => {
@@ -33,6 +33,10 @@ const AddContestant = () => {
             <div className="form-group py-3">
                 <label>Contestant Name</label>
                 <input type="text" required name="name" className="form-control " value={state.name}  style={rad} onChange={handlechanges}/>
+            </div>
+            <div className="form-group py-3">
+                <label>Contestant Institution</label>
+                <input type="text" required name="school" className="form-control " value={state.school}  style={rad} onChange={handlechanges}/>
             </div>
             {/* <div className="form-group">
                 <label>Features</label>

@@ -10,6 +10,17 @@ function Categories({list}) {
 <div className="py-4">
     <h5 className="text-light mb-5 underline">NAPPS AWARDS</h5>
     <div className="d-flex flex-row flex-wrap justify-content-center text-center">
+      {
+        list.length == 0 && (
+          <Card style={{ width: '18rem' }} className="shadow mb-4 mx-3">
+      <Card.Body>
+          <Card.Text>
+          Loading...
+          </Card.Text>
+      </Card.Body>
+      </Card>
+        )
+      }
     {list.map(({category}, index) => {
       return (<Card key={index} style={{ width: '18rem' }} className="shadow mb-4 mx-3">
       <Card.Body>

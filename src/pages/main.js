@@ -3,7 +3,6 @@ import Categories from '../components/categories'
 import Credits from '../components/credits'
 import LAndingPage from '../components/landingpage'
 import NavBar from '../components/navbar'
-import Sponsors from '../components/sponsors'
 import { firestore, fb } from '../firebase/firebase'
 function Main({nominees}) {
   useEffect( () => {

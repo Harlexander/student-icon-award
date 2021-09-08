@@ -3,7 +3,7 @@
     height: 700px;
 }
 .inner{
-    background: rgba(28, 29, 27, 0.7);
+    background: rgba(52, 56, 52, 0.5);
     height: 100%;
     color: rgb(253, 253, 253);
     padding : 250px
@@ -19,12 +19,12 @@
   }
   .underline::after{
     content:'';
-    height:4px;
+    height:5px;
     width:30%;
-    background:rgb(3, 16, 88);
+    background:rgb(108, 172, 255);
     position:absolute;
     left:calc(50% - 10%);
-    bottom:-5px;
+    bottom:-20px;
   }
 @media only screen and (max-width: 600px) {
     .landing{

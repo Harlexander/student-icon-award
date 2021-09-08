@@ -7,7 +7,7 @@ function NavBar({list}) {
     <Navbar expand="lg" animate="false" className="nnn">
   <Container className="navbar">
     <Navbar.Brand href="/" className="text-primary font-weight-bold"><Image height="50" src={logo}/> <span className="nav-head">NAPPS</span></Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-auto">
         <Nav.Link href="/">Home</Nav.Link>
