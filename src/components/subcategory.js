@@ -114,6 +114,7 @@ const Vote = ({show, handleClose, onChange, onChang, contestant, collection}) =>
   </Modal.Header>
   <Modal.Body>
       <Alert variant={alert.state} className={`d-${Object.keys(alert).length === 0 ? "none" : "block"}`}>
+          {alert.data}
       </Alert>
   <div className="form-group">
       <label>Email :</label>

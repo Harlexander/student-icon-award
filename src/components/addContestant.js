@@ -6,7 +6,7 @@ import {firestore, fb} from './../firebase/firebase'
 const AddContestant = () => {
     const [state, setState] = useState({
         name : "",
-        school : "",
+        school : " ",
         category : ''
     });
     const addContestant = (e) => {
