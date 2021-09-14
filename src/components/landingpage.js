@@ -4,7 +4,7 @@ function LAndingPage() {
   <div className="px-0 mx-0 landing">
     <div className="inner">
     <br/>
-    <p className="inner-text">2021 NAPPS Award</p>
+    <p className="inner-text">2021 NAPSS Award</p>
     </div>
   </div>
   );

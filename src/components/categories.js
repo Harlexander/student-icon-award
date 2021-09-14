@@ -8,7 +8,7 @@ function Categories({list}) {
     <h3>Categories</h3>
     <div className="py-4">
 <div className="py-4">
-    <h5 className="text-light mb-5 underline">NAPPS AWARDS</h5>
+    <h5 className="text-light mb-5 underline">NAPSS AWARDS</h5>
     <div className="d-flex flex-row flex-wrap justify-content-center text-center">
       {
         list.length == 0 && (
