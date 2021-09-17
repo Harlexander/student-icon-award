@@ -64,28 +64,10 @@ function SubCategory({list}) {
    <div className="text-center py-5 bg-dark">
     <h3>Nominees</h3>
     <div className="d-flex flex-row flex-wrap justify-content-center">
-    {
-        highest && (
-            <Card style={{ width: '18rem' }} className="mx-4 mb-3">
-            <Card.Header className="p-0">
-              <i className="profile-dot">
-              <span>{highest.match(/\b(\w)/g).join("").toUpperCase()}</span>
-              </i> 
-              </Card.Header>
-          <Card.Body>
-              <Card.Title className="text-capitalize">{highest}</Card.Title>
-              <p className="text-capitalize">.</p>
-              <Button variant="primary" onClick={() => handleShow({name : highest})}>
-              Vote Here
-              </Button>
-          </Card.Body>
-          </Card>
-        )
-    }
+
     {result.map((details, index) => {
         const name = Object.keys(details)[0]
         const school = Object.values(details)[0]
-        if(name !== highest){
             return (
                 <Card style={{ width: '18rem' }} key={index} className="mx-4 mb-3">
                   <Card.Header className="p-0">
@@ -101,9 +83,7 @@ function SubCategory({list}) {
                     </Button>
                 </Card.Body>
                 </Card>
-                ) 
-        }
-
+                )
        })}
     </div>
   </div> 
