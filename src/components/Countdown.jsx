@@ -10,14 +10,21 @@ const Countdown = () => {
     });
 
     const UpdateTimer = () => {
-        const eventTime = moment("11 13 2021, 6 : 00 am", "MM DD YYYY, h:mm a");
-        const today = moment();
-        const countDownTime = moment(eventTime - today);
+        const countDownDate = new Date("Nov 13, 2021 2:00:00").getTime();
+        
+            const currentDate = new Date().getTime();
+            const diff = countDownDate - currentDate;
+     
+            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let hrs = Math.floor(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+            let mins = Math.floor(diff % (1000 * 60 * 60) / (1000 * 60));
+            let sec = Math.floor(diff % (1000 * 60) / (1000));
+
         setState({
-            days : countDownTime.format("D"),
-            hours  : countDownTime.format("HH"),
-            minutes : countDownTime.format("mm"),
-            seconds : countDownTime.format("ss")
+            days : days,
+            hours  : hrs,
+            minutes : mins,
+            seconds : sec
         });
     }
 
