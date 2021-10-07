@@ -11,7 +11,7 @@ const Countdown = () => {
 
     const UpdateTimer = () => {
         const countDownDate = new Date("Nov 13, 2021 2:00:00").getTime();
-        
+
             const currentDate = new Date().getTime();
             const diff = countDownDate - currentDate;
      
@@ -35,7 +35,7 @@ const Countdown = () => {
     }, []);
 
     return (
-        <div className="container-fluid py-5 colored-bg ">
+        <div className="container-fluid colored-bg ">
             <Fade top>
               <h2>COUNTDOWN</h2>  
             </Fade>

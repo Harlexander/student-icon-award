@@ -9,6 +9,7 @@ body, html {
 }
 .colored-bg{
 	background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+	padding : 100px 0
 }
 .meet{
 	padding: 15px;
@@ -630,6 +631,9 @@ color: #777;
 #about img {
 	margin: 50px 0;
 }
+.landing{
+	height : 500px
+}
 .intro p {
 	color: #fff;
 	font-size: 16px;
@@ -651,7 +655,4 @@ color: #777;
 }
 .meet{
 	background: linear-gradient();
-}
-.landing{
-	height : 350px
 }
