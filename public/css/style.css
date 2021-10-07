@@ -35,6 +35,9 @@ body, html {
 	.countdown-unit{
 		font-size : 35px;
 	}
+	.navbar-brand{
+		height : 40px
+	}
   .vcenter {
     flex-direction: column;
   }

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Card, div, Row, Col, Container } from 'react-bootstrap'
+import { Slide, Zoom } from 'react-reveal'
+import { Link } from 'react-router-dom'
 
 
 const reps = [
@@ -105,13 +107,19 @@ const Representatives = () => {
                 <div className='section-title'>
                 <h2>MEET OUR AMBASSADORS</h2>
                 </div>
-
+                <Zoom bottom>
                 <div className="container">
                     <img src="/reps/reps.png" className="img-fluid"/>
-                </div>
+                </div>                    
+                </Zoom>
+                <Slide left>
                 <div className="container py-5">
-                    <button className="btn meet">Meet Them <i className="fa fa-arrow-right"></i></button>
+                    <Link to="/representatives">
+                    <button className="btn meet">Meet Them <i className="fa fa-arrow-right"></i></button>    
+                    </Link>
                 </div>
+                </Slide>
+
         </div>
     )
 }
@@ -129,7 +137,8 @@ export const AllReps = () => {
             <Row>
                     {
                         reps.map(({name, img, school}) => (
-                        <div className="col-md-3  position-relative">
+                        <Slide bottom>
+                         <div className="col-md-3  position-relative">
                             <div className="mx-sm-2 m-1">
                               <img src={img} height="320px" width="250px"/>
                             <div className="overlay d-flex align-items-center justify-content-center">
@@ -140,7 +149,9 @@ export const AllReps = () => {
 
                                 </div>  
                                 </div>
-                            </div>               
+                            </div>      
+                        </Slide>
+                               
                         ))
                     }
                    </Row>
