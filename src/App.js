@@ -1,18 +1,19 @@
-import './App.css';
-import Main from './pages/main'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Route } from 'react-router';
-import SubCategory from './components/subcategory';
-import AddContestant from './components/addContestant';
-import {firestore, fb} from './firebase/firebase'
 import { useEffect, useState } from 'react';
-import Results from './components/Results';
+import { Switch, Route } from 'react-router-dom';
+import './App.css';
+import AddContestant from './components/AddContestant';
+import { firestore } from './firebase/firebase';
+import Contestants from './pages/Contestants';
+import Home from './pages/Home';
+import Nomination from './pages/Nomination';
+import Reps from './pages/Reps';
+import Voting from './pages/Voting';
 
 function App() {
   const [data, setData] = useState([])
   useEffect(() => {
     let table = []
-    firestore.collection("Contestants").get().then((querySnapshot) => {
+    firestore.collection("test1").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
          table.push({category : doc.id, nominees : [doc.data()]})
@@ -23,20 +24,29 @@ function App() {
 
   console.log(data)
   return (
-  <div className="App">
-      <Route path="/" exact>
-      <Main nominees={data}/>
-      </Route>
-      <Route path="/category/:categoryId">
-        <SubCategory list={data}/>
-      </Route>
-      <Route path="/add">
-        <AddContestant/>
-      </Route>
-      <Route path="/xyz">
-        <Results/>
-      </Route>
+    <div className="App">
+      <Switch>
+        <Route path="/" exact>
+          <Home/>
+        </Route>
+        <Route path="/nomination">
+          <Nomination/>
+        </Route>
+        <Route path="/voting">
+          <Voting data={data}/>
+        </Route>
+        <Route path="/cate/:categoryId">
+          <Contestants list={data}/>
+        </Route>
+        <Route path="/add">
+          <AddContestant/>
+        </Route>
+        <Route path="/representatives">
+          <Reps/>
+        </Route>
+      </Switch>
     </div>
   );
 }
+
 export default App;

@@ -1,80 +1,56 @@
-.landing{
-    background: url("./images/napps.jpeg") no-repeat center;
-    height: 700px;
+.App {
+  text-align: center;
 }
-.inner{
-    background: rgba(52, 56, 52, 0.5);
-    height: 100%;
-    color: rgb(253, 253, 253);
-    padding : 250px
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
-.inner-text{
-    font-size : 80px;
-    font-weight : lighter
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
-.underline{
-    display:inline-block;
-    position:relative;
-    
-  }
-  .underline::after{
-    content:'';
-    height:5px;
-    width:30%;
-    background:rgb(108, 172, 255);
-    position:absolute;
-    left:calc(50% - 10%);
-    bottom:-20px;
-  }
-@media only screen and (max-width: 600px) {
-    .landing{
-        background: url("./images/napps.jpeg") center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height : 300px
-    }
-    .nnn{
-      background-color: rgb(255, 255, 255);
-    }
-    .nav-head{
-      font-weight: bold;
-      font-size: larger;
-    }
-    .inner-text{
-        font-size : 40px;
-        font-weight : lighter
-    }
-    .inner{
-        padding: 150px 30px;
-    }
-  }
-  .profile-dot {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    width: 100%;
-    background-color: lightgray;
-  }
-  
-  .profile-dot span {
-    font-weight: 700;
-    font-size: 100px;
-    color: #fff;
-    font-style: normal;
-  }
-/* .fill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-.fill img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%
-} */
+
+.App-link {
+  color: #61dafb;
+}
+.overlay{
+  background : rgba(0, 0, 0, 0.719);
+  position : absolute;
+  top : 0;
+  bottom  : 0;
+  left : 0;
+  right : 0;
+  width : 100%;
+  height : 100%;
+  padding : auto;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.overlay:hover{
+  opacity: 1;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.meet{
+  background-color: ;
+}
