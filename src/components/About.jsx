@@ -9,7 +9,7 @@ const About = () => {
             <div className='col-xs-12 col-md-6'>
               {' '}
               <Fade left>
-              <img src='img/coming.jpeg' className='img-fluid' alt='' />{' '}
+              <img src='img/about.jpg' className='img-fluid' alt='' />{' '}
               </Fade>
             </div>
             <div className='col-xs-12 col-md-6'>

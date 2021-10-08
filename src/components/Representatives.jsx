@@ -11,11 +11,6 @@ const reps = [
         school : "",
     },
     {
-        name : "Elizabeth Esievo",
-        img : "/reps/Elizabeth.jpg",
-        school : "IOU",
-    },
-    {
         name : "Faith",
         img : "/reps/faith.jpg",
         school : "uniben",
@@ -96,11 +91,47 @@ const reps = [
         school : "AUCHI POLY",
     },
     {
+        name : "Agunodi Goodluck",
+        img : "/reps/Alaere.jpg",
+        school : "AUCHI POLY",
+    },
+    {
+        name : "Agunodi Goodluck",
+        img : "/reps/Bassey.jpg",
+        school : "AUCHI POLY",
+    },
+    {
+        name : "Agunodi Goodluck",
+        img : "/reps/Erinsaken.jpg",
+        school : "AUCHI POLY",
+    },
+    {
+        name : "Agunodi Goodluck",
+        img : "/reps/Joyce.jpg",
+        school : "AUCHI POLY",
+    },
+    {
+        name : "Agunodi Goodluck",
+        img : "/reps/Oluchi.jpg",
+        school : "AUCHI POLY",
+    },
+    {
+        name : "Agunodi Goodluck",
+        img : "/reps/Ugbodaga.jpg",
+        school : "AUCHI POLY",
+    },
+    {
+        name : "Agunodi Goodluck",
+        img : "/reps/Agunodi Goodluck.jpg",
+        school : "AUCHI POLY",
+    },
+    {
         name : "ERA",
         img : "/reps/ERA.jpg",
         school : "EDO STATE UUNIVERSITY",
     },
 ]
+
 const Representatives = () => {
     return (
         <div className="container-fluid my-5">
@@ -109,7 +140,7 @@ const Representatives = () => {
                 </div>
                 <Zoom bottom>
                 <div className="container">
-                    <img src="/reps/reps.png" className="img-fluid"/>
+                    <img src="/reps/reps.jpg" className="img-fluid"/>
                 </div>                    
                 </Zoom>
                 <Slide left>
@@ -126,7 +157,15 @@ const Representatives = () => {
 export default Representatives
 
 export const AllReps = () => {
+    const cache = {};
 
+    function importAll(r) {
+        r.keys().forEach((key) => (cache[key] = r(key)));
+    }
+    // Note from the docs -> Warning: The arguments passed to require.context must be literals!
+    importAll(require.context("../../public/reps", false, /\.(png|jpe?g|svg)$/));
+    
+    const IMAGE = Object.entries(cache).map(module => module[1].default);
     return(
         <>
                 <div className="container-fluid">
@@ -136,20 +175,13 @@ export const AllReps = () => {
             <Container>
             <Row>
                     {
-                        reps.map(({name, img, school}) => (
+                        reps.map(({img}) => (
                         <Slide bottom>
                          <div className="col-md-3  position-relative">
-                            <div className="mx-sm-2 m-1">
-                              <img src={img} height="320px" width="250px"/>
-                            <div className="overlay d-flex align-items-center justify-content-center">
-                                <div className="my-auto text-white">
-                                <p style={{fontSize : "25px", fontWeight : "500", letterSpacing : "0.15em"}}>{name.toLocaleUpperCase()}</p>
-                                <p style={{fontSize : "15px", fontWeight : "500", letterSpacing : "0.15em"}}><i className="fa fa-map-marker"></i> {school.toLocaleUpperCase()}</p>
-                            </div>
-
-                                </div>  
-                                </div>
-                            </div>      
+                             <div className="reps">
+                              <img src={img} className="img-fluid"/>
+                             </div>
+                        </div> 
                         </Slide>
                                
                         ))

@@ -24,7 +24,7 @@ const Nominate = () => {
         "Sport woman of the year ",
         "Most influential student ",
         "Programmer of the year",
-        "Student of the year ",
+        "Student Philantropist of the year",
         "Personality of the year ",
         "Most popular student of the year ",
         "Blogger of the year ",
@@ -61,24 +61,23 @@ const Nominate = () => {
         }))
      }
      const puhNomination = (e) => {
-        //  setLoading(true);
+         setLoading(true);
          e.preventDefault();
-         alert("Nomintion starts by 12am. Thank You!!!")
-        //  firestore.collection("Nomination").doc(state.category).set({
-        //     [state.nomination] : {
-        //         number : fb.firestore.FieldValue.increment(1),
-        //         instititution : state.institution
-        //     }
-        // }, {merge : true})
-        // .then(() => setState({        
-        // name : "",
-        // email : "",
-        // category : '',
-        // mobile : "",
-        // nomination : "",
-        // institution : ""
-        // }))
-        // .then(() => {setLoading(false); alert("Your Nomination Has Been Recorded!!! Thank You.")})
+         firestore.collection("Nomination").doc(state.category).set({
+            [state.nomination] : {
+                number : fb.firestore.FieldValue.increment(1),
+                instititution : state.institution
+            }
+        }, {merge : true})
+        .then(() => setState({        
+        name : "",
+        email : "",
+        category : '',
+        mobile : "",
+        nomination : "",
+        institution : ""
+        }))
+        .then(() => {setLoading(false); alert("Your Nomination Has Been Recorded!!! Thank You.")})
     }
      console.log(state)
     return (
@@ -88,7 +87,7 @@ const Nominate = () => {
               <Zoom left>
                <div className='col-xs-12 col-md-6'>
               {' '}
-              <img src='img/coming.jpeg' className='img-fluid' alt='' />{' '}
+              <img src='img/how.jpg' className='img-fluid' alt='' />{' '}
             </div>
               </Zoom>
               <Zoom right>
@@ -96,7 +95,7 @@ const Nominate = () => {
               <div className='text-left about-text'>
                 <h2>Nomination</h2>
                 <div className='list-style row text-left px-2'>
-                    <p>Nomination will sooon begin, check the image for the minimum requirements fora contestant to be nominated. Nomination starts by <b>00:00am || 11th, Oct, 2021.</b></p>
+                    <p>Nomination will sooon begin, check the image for the minimum requirements fora contestant to be nominated. Nomination starts by <b>00:00am || 8th, Oct 2021 - 14th, Oct 2021.</b></p>
                 </div>
                 <Form onSubmit={puhNomination}>
                     <h4>Personal Information </h4>

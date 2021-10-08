@@ -7,6 +7,9 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
+.reps{
+	height : 300px
+}
 .colored-bg{
 	background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
 	padding : 100px 0
@@ -36,6 +39,7 @@ body, html {
 	.countdown-unit{
 		font-size : 35px;
 	}
+
 	.navbar-brand{
 		height : 40px
 	}
@@ -631,6 +635,9 @@ color: #777;
 #about img {
 	margin: 50px 0;
 }
+	.reps{
+		height :330px
+	}
 .landing{
 	height : 500px
 }

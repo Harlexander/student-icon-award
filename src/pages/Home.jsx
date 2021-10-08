@@ -31,7 +31,7 @@ const NominateNav = () => {
         <div className='container-fluid text-center colored-bg'>
             <Fade top>
              <h2>NOMINATion</h2>
-             <p className="text-light">Click the button below to nominate your favourite candidate in any category and shools around Edo state. Nomination starts by <b>00:00am || 11th, Oct, 2021.</b></p>   
+             <p className="text-light">Click the button below to nominate your favourite candidate in any category and shools around Edo state. Nomination starts by <b>00:00am || 8th, Oct 2021 - 14th, Oct 2021.</b></p>   
             </Fade>
             <Fade left>
                 <Link to="/nomination">

@@ -10,7 +10,7 @@ const Countdown = () => {
     });
 
     const UpdateTimer = () => {
-        const countDownDate = new Date("Nov 13, 2021 2:00:00").getTime();
+        const countDownDate = new Date("Jan 29, 2022 2:00:00").getTime();
 
             const currentDate = new Date().getTime();
             const diff = countDownDate - currentDate;
