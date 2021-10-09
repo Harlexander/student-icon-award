@@ -64,9 +64,9 @@ const Nominate = () => {
          setLoading(true);
          e.preventDefault();
          firestore.collection("Nomination").doc(state.category).set({
-            [state.nomination] : {
+            [state.nomination.toUpperCase()] : {
                 number : fb.firestore.FieldValue.increment(1),
-                instititution : state.institution
+                instititution : state.institution.toUpperCase()
             }
         }, {merge : true})
         .then(() => setState({        
