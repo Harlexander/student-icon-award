@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import AddContestant from './components/AddContestant';
+import Result from './components/Result';
 import { firestore } from './firebase/firebase';
 import Contestants from './pages/Contestants';
 import Home from './pages/Home';
@@ -13,10 +14,10 @@ function App() {
   const [data, setData] = useState([])
   useEffect(() => {
     let table = []
-    firestore.collection("test1").get().then((querySnapshot) => {
+    firestore.collection("Nomination").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
-         table.push({category : doc.id, nominees : [doc.data()]})
+         table.push({...Object.values(doc.data()), category : doc.id})
       });
       setData(table)
   });
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path="/cate/:categoryId">
           <Contestants list={data}/>
+        </Route>
+        <Route path="/result">
+          <Result list={data}/>
         </Route>
         <Route path="/add">
           <AddContestant/>

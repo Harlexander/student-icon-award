@@ -7,7 +7,7 @@ const Voting = ({data}) => {
     return (
         <div>
             <Navigation/>
-            <LandingPage src={"coming.jpeg"}/>
+            <LandingPage src={"coming.jpg"}/>
             <Menu data={data}/>
         </div>
     )

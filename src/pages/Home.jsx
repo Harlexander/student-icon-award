@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <div>
            <Navigation/> 
-           <LandingPage src={"home.jpg"}/>
+           <LandingPage src={"coming.jpg"}/>
            <About/>
            <Countdown/>
            <NominateNav/>
