@@ -47,8 +47,8 @@ const Nominate = () => {
         "Podcaster of the year ",
         "Media influencer of the year ",
         "Content creator of the year ",
-        "MC/Compere (male)",
-        "MC/Compere (female)",
+        "MC or Compere (male)",
+        "MC or Compere (female)",
         "Best student DJ"
         ]
     
