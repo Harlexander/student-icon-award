@@ -28,7 +28,7 @@ const AddContestant = () => {
         }, () => {
           storage.ref("contestant").child(`${state.name}-${state.institution}`).getDownloadURL()
            .then(fireBaseUrl => {
-            firestore.collection("test1").doc(state.category.toUpperCase()).set({
+            firestore.collection("category").doc(state.category.toUpperCase()).set({
                 [state.name.toUpperCase()] :  {
                     name : state.name,
                     institution : state.institution,
