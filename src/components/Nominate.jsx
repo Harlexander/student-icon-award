@@ -28,7 +28,7 @@ const Nominate = () => {
         "Personality of the year ",
         "Most popular student of the year ",
         "Blogger of the year ",
-        "Student hypeman / hype woman of the year ",
+        "Student hypeman or hype woman of the year ",
         "Music artist of the year ",
         "Comedian of the year ",
         "Student brand of the year ",
@@ -47,8 +47,8 @@ const Nominate = () => {
         "Podcaster of the year ",
         "Media influencer of the year ",
         "Content creator of the year ",
-        "MC/Compere (male)",
-        "MC/Compere (female)",
+        "MC or Compere (male)",
+        "MC or Compere (female)",
         "Best student DJ"
         ]
     

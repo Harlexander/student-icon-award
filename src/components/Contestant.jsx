@@ -33,7 +33,7 @@ function Contestant({list}) {
     }
     useEffect(() => {
         const id = window.location.pathname.replace(/-/g, " ").split("/")[2]
-        firestore.collection("test1").doc(id).get()
+        firestore.collection("category").doc(id).get()
         .then((doc) => {
             let value = doc.data()
             let name = Object.keys(value).reduce((a, b) => value[a] > value[b] ? a : b)
