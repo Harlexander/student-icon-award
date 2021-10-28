@@ -11,7 +11,7 @@ const Category = ({data}) => {
                         <Slide bottom>
             <div className="col-md-3 p-2">
             <Card>
-            <Card.Img variant="bottom" src="img/home.jpeg"  className="w-100 img-fluid"/>
+            <Card.Img variant="bottom" src="img/home.jpeg" onError={(e) => {e.target.onerror = null; e.target.src = "/img/coming.jpg"}}  className="w-100 img-fluid"/>
             <Card.Body>
                 <Card.Title>{category.toUpperCase()}</Card.Title>
                 <Card.Text>

@@ -14,10 +14,10 @@ function App() {
   const [data, setData] = useState([])
   useEffect(() => {
     let table = []
-    firestore.collection("Nomination").get().then((querySnapshot) => {
+    firestore.collection("category").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
-         table.push({...Object.values(doc.data()), category : doc.id})
+         table.push({nominees : Object.values(doc.data()), category : doc.id})
       });
       setData(table)
   });

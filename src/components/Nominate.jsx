@@ -61,23 +61,7 @@ const Nominate = () => {
         }))
      }
      const puhNomination = (e) => {
-         setLoading(true);
-         e.preventDefault();
-         firestore.collection("Nomination").doc(state.category).set({
-            [state.nomination.toUpperCase()] : {
-                number : fb.firestore.FieldValue.increment(1),
-                instititution : state.institution.toUpperCase()
-            }
-        }, {merge : true})
-        .then(() => setState({        
-        name : "",
-        email : "",
-        category : '',
-        mobile : "",
-        nomination : "",
-        institution : ""
-        }))
-        .then(() => {setLoading(false); alert("Your Nomination Has Been Recorded!!! Thank You.")})
+         alert("Nomination Closed!!!!")
     }
      console.log(state)
     return (

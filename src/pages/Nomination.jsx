@@ -9,7 +9,7 @@ const Nomination = () => {
     return (
         <div>
             <Navigation/>
-            <LandingPage src={"nomination.jpg"}/>
+            <LandingPage src={"img/nomination.jpg"}/>
             <Nominate/>
             <Contact/>
         </div>

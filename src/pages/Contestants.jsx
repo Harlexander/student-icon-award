@@ -6,12 +6,12 @@ import { Navigation } from '../components/navigation'
 
 const Contestants = ({list}) => {
     return (
-        <div>
+        <>
             <Navigation/>
-            <LandingPage src={"coming.jpeg"}/>
+            <LandingPage src={"../img/coming.jpg"}/>
             <Contestant list={list}/>
             <Contact/>
-        </div>
+        </>
     )
 }
 

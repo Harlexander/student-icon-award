@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Card,  Container, Button, Modal, ListGroup, Alert} from 'react-bootstrap'
 import { useRouteMatch } from 'react-router-dom';
 import {firestore, fb} from '../firebase/firebase'
+import Paystack from '../paystack/paystack';
 function Contestant({list}) {
     const [show, setShow] = useState(false);
     const [contestant, setContestant] = useState({});
@@ -31,48 +32,26 @@ function Contestant({list}) {
             }
         ))
     }
-    useEffect(() => {
-        const id = window.location.pathname.replace(/-/g, " ").split("/")[2]
-        firestore.collection("category").doc(id).get()
-        .then((doc) => {
-            let value = doc.data()
-            let name = Object.keys(value).reduce((a, b) => value[a] > value[b] ? a : b)
-            setHighest(name)
-         })
-            
-    }, [])
-    const {url} = useRouteMatch()
+    const { url } = useRouteMatch()
     const currentPerson = url.split("/")[2].replace(/-/g, " ")
-
     const data = list.find(item => item.category === currentPerson)
-    const nominee = data ? data.nominees[0] :  {}
-    let result = Object.entries(nominee).map(( [k, v] ) => ({ [k]: v }));
-    console.log(result)
+    const nominee = data ? data.nominees :  [];
     return (
       <>
-      {/* <Vote show={show} handleClose={handleClose} contestant={contestant} onChange={updateVote} onChang={updateEmail} collection={currentPerson}/> */}
-    <div className="px-0 mx-0 landing">
-        <div className="inner">
-            <br/>
-            <p className="inner-text">{currentPerson.toUpperCase()}</p>
-        </div>
-    </div>
+      <Vote show={show} handleClose={handleClose} contestant={contestant} onChange={updateVote} onChang={updateEmail} collection={currentPerson}/>
    <div className="text-center py-5 bg-dark">
-    <h3>Nominees</h3>
+    <h2 className="text-light">Nominees</h2>
     <div className="d-flex flex-row flex-wrap justify-content-center">
-    {result.map((details, index) => {
-        const name = Object.keys(details)[0]
-        const school = Object.values(details)[0]
+    {nominee.map((details, index) => {
             return (
                 <Card style={{ width: '18rem' }} key={index} className="mx-4 mb-3">
                   <Card.Header className="p-0">
-                    <img src={school.img} width="100%"/>
+                    <img src={details.img} onError={(e)=>{e.target.onerror = null; e.target.src="../img/coming.jpg"}} width="100%"/>
                     </Card.Header>
                 <Card.Body>
-                    <Card.Title className="text-capitalize">{name}</Card.Title>
-                    <p className="text-capitalize">{school.about}</p>
-                    <p>{school.institution.toUpperCase()}</p>
-                    <Button variant="primary" onClick={() => handleShow({name : name})}>
+                    <Card.Title className="text-capitalize">{details.name}</Card.Title>
+                    <p>{details.institution.toUpperCase()}</p>
+                    <Button variant="primary" onClick={() => handleShow({name : details.name})}>
                     Vote Here
                     </Button>
                 </Card.Body>
@@ -124,13 +103,12 @@ const Vote = ({show, handleClose, onChange, onChang, contestant, collection}) =>
       <label>Email :</label>
       <input type="email" value={contestant.email} name="email" className="form-control" onChange={onChang}/>
   </div>
-    Number Of Votes
     <input type="number" value={contestant.votes} name="number_of_votes" className="form-control" onChange={onChange}/>
     <h5 className="mt-auto py-2">N<span>{contestant.total}</span></h5>
   </Modal.Body>
   <Modal.Footer>
     <Button variant="secondary" onClick={handleClose}>Close</Button>
-    {/* <Paystack totalAmount={contestant.total * 100}  status={status} updateVote={voteCount} Email={contestant.email}/> */}
+    <Paystack totalAmount={contestant.total * 100}  status={status} updateVote={voteCount} Email={contestant.email}/>
   </Modal.Footer>
 </Modal>
     )

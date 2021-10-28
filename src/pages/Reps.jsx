@@ -7,7 +7,7 @@ const Reps = () => {
     return (
         <div>
             <Navigation/>
-            <LandingPage src={"coming.jpeg"}/>
+            <LandingPage src={"img/coming.jpeg"}/>
             <AllReps/>
         </div>
     )

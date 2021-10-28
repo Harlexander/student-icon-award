@@ -1,4 +1,4 @@
-export const Navigation = (props) => {
+export const Navigation = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-md-5">
   <a href="#"><img src="img/title.jpg" class="navbar-brand shadow"/></a>
