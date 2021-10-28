@@ -17,6 +17,44 @@ const AddContestant = () => {
             img : file
         }))
     }
+      const Categories = [ 
+        "-",
+        "Best class rep of the year",
+        "Student enterprenuer of the year ",
+        "Student Event Of The year ",
+        "Student graphic designer of the year ",
+        "Best faculty of the year ",
+        "Sports man of the year ",
+        "Sport woman of the year ",
+        "Most influential student ",
+        "Programmer of the year",
+        "Student Philantropist of the year",
+        "Personality of the year ",
+        "Most popular student of the year ",
+        "Blogger of the year ",
+        "Student hypeman / hype woman of the year ",
+        "Music artist of the year ",
+        "Comedian of the year ",
+        "Student brand of the year ",
+        "Most political student ",
+        "Best student society of the year ",
+        "Photographer of the year",
+        "Student influencer of the year ",
+        "Most popular student ",
+        "Spoken word artist of the year ",
+        "Best tertiary institution of the year",
+        "Best writer of the year",
+        "Student OAP of the year",
+        "Dance group of the year ",
+        "Most political student",
+        "Activist of the year ",
+        "Podcaster of the year ",
+        "Media influencer of the year ",
+        "Content creator of the year ",
+        "MC/Compere (male)",
+        "MC/Compere (female)",
+        "Best student DJ"
+        ]
     const addContestant = (e) => {
         e.preventDefault()
         const uploadTask =  storage.ref(`contestant/${state.name}-${state.institution}`).put(state.img)
@@ -82,8 +120,13 @@ const AddContestant = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasictext">
                     <Form.Label>Contestant Category</Form.Label>
-                    <Form.Control name="category" onChange={handlechanges} value={state.category} className="border-0 p-3 text-white bg-dark rounded-0" type="text" placeholder="Category" />
-                </Form.Group>
+                    <select onChange={handlechanges} className="border-0 p-3 text-white bg-dark rounded-0 w-100" name="category" value={state.category} >
+                       {
+                           Categories.map((item, index) => (
+                               <option key={index} value={item}>{item.toUpperCase()}</option>
+                           ))
+                       }
+                    </select>                </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasictext">
                     <Form.Label>About Contestant</Form.Label>
                     <Form.Control name="about" onChange={handlechanges} value={state.about} className="border-0 p-3 text-white bg-dark rounded-0" type="text" placeholder="About" />
