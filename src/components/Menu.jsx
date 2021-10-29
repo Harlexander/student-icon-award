@@ -11,7 +11,9 @@ const Menu = ({data}) => {
             <p>Select the categoty of your favourite contestants. And start Voting.</p>                
             </div>
             <h1>Voting starts By 08:00pm </h1>
-            //<Category data={data}/> 
+            /*
+<Category data={data}/> 
+*/
         </div>
         <Contact/> 
         </div>
