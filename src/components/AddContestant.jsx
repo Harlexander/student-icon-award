@@ -20,6 +20,7 @@ const AddContestant = () => {
       const Categories = [ 
         "-",
         "Best class rep of the year",
+"Student of the year",
         "Student enterprenuer of the year ",
         "Student Event Of The year ",
         "Student graphic designer of the year ",
@@ -32,7 +33,7 @@ const AddContestant = () => {
         "Personality of the year ",
         "Most popular student of the year ",
         "Blogger of the year ",
-        "Student hypeman / hype woman of the year ",
+        "Student hypeman or hype woman of the year ",
         "Music artist of the year ",
         "Comedian of the year ",
         "Student brand of the year ",
@@ -51,8 +52,7 @@ const AddContestant = () => {
         "Podcaster of the year ",
         "Media influencer of the year ",
         "Content creator of the year ",
-        "MC/Compere (male)",
-        "MC/Compere (female)",
+        "MC or Compere",
         "Best student DJ"
         ]
     const addContestant = (e) => {
