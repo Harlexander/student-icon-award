@@ -10,10 +10,7 @@ const Menu = ({data}) => {
             <h2>VOTING</h2>
             <p>Select the categoty of your favourite contestants. And start Voting.</p>                
             </div>
-            {
-                <h3> Voting Starts Soon</h3>
-            }
-            {/* <Category data={data}/> */}
+            <Category data={data}/> 
         </div>
         <Contact/> 
         </div>
