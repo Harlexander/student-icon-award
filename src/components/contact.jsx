@@ -19,7 +19,7 @@ export const Contact = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    firestore.collection("Messages").doc().add({
+    firestore.collection("Messages").add({
       email : email,
       name : name,
       message : message
@@ -38,8 +38,7 @@ export const Contact = (props) => {
         <div className='section-title text-left'>
                 <h2>Get In Touch</h2>
                 <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
+                  Please fill out the form below if you have issues with the voting and we will sort it out.
                 </p>
               </div>
             <div className='row'>
