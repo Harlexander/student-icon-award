@@ -46,7 +46,7 @@ function Contestant({list}) {
             return (
                 <Card style={{ width: '18rem' }} key={index} className="mx-4 mb-3">
                   <Card.Header className="p-0">
-                    <img src={details.img} onError={(e)=>{e.target.onerror = null; e.target.src="../img/coming.jpg"}} width="100%"/>
+                    <img src={details.img} style={{maxHeight : "350px"}} onError={(e)=>{e.target.onerror = null; e.target.src="../img/coming.jpg"}} width="100%"/>
                     </Card.Header>
                 <Card.Body>
                     <Card.Title className="text-capitalize">{details.name}</Card.Title>
@@ -103,8 +103,10 @@ const Vote = ({show, handleClose, onChange, onChang, contestant, collection}) =>
       <label>Email :</label>
       <input type="email" value={contestant.email} name="email" className="form-control" onChange={onChang}/>
   </div>
+  <label>No Of Vote(s) : </label>
     <input type="number" value={contestant.votes} name="number_of_votes" className="form-control" onChange={onChange}/>
     <h5 className="mt-auto py-2">N<span>{contestant.total}</span></h5>
+    <small className="text-info">If Payment is successful and your vote does not show succeessful contact us via the form below submit your email and No of votes, Thank You!!!</small>
   </Modal.Body>
   <Modal.Footer>
     <Button variant="secondary" onClick={handleClose}>Close</Button>

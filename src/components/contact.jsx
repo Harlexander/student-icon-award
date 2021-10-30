@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { firestore } from '../firebase/firebase'
 
 const initialState = {
   name: '',
@@ -6,23 +7,29 @@ const initialState = {
   message: '',
 }
 export const Contact = (props) => {
-  const [{ name, email, message, }, setState] = useState(initialState)
+  const [{ name, email, message }, setState] = useState(initialState)
   const [alert, setAlert] = useState("")
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setState((prevState) => ({ ...prevState, [name]: value }))
   }
+
   const clearState = () => setState({ ...initialState })
-console.log(name, email, message)
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    clearState()
-  //  sendEmail({email : email, name : name, message : message})
-   setAlert("Thank You " +name+ "! We will respond to you shortly.")
-   setTimeout(()=> {
-    setAlert("")
-   }, 3000)
+    firestore.collection("Messages").doc().add({
+      email : email,
+      name : name,
+      message : message
+    })
+    .then(() => {  clearState();
+    setAlert("Thank You " +name+ "! We will respond to you shortly.")})
+
+    setTimeout(()=> {
+      setAlert("")
+    }, 3000)
   }
   return (
     <div>
