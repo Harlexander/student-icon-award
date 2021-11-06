@@ -1,11 +1,10 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
-import {Slide} from 'react-reveal'
+import {Slide } from 'react-reveal'
 import { Link } from 'react-router-dom'
 
 const Category = ({data}) => {
     return (
-      
         <div className="row">
          {data.map(({category}) => (
                         <Slide bottom>
