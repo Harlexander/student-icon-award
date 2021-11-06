@@ -10,6 +10,7 @@ import { Button } from 'react-bootstrap'
 import { Fade } from 'react-reveal'
 import Representatives from '../components/Representatives'
 import { Link } from 'react-router-dom'
+import Sponsors from '../components/Sponsors'
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
            <Countdown/>
            <NominateNav/>
            <Representatives/>
+           <Sponsors/>
            <Social/>
            <Contact/>
         </div>
