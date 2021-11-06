@@ -41,7 +41,7 @@ function Contestant({list}) {
       <Vote show={show} handleClose={handleClose} contestant={contestant} onChange={updateVote} onChang={updateEmail} collection={currentPerson}/>
    <div className="text-center py-5 bg-dark">
     <h2 className="text-light">Nominees</h2>
-    {/* <small className="text-light d-block mb-4">The bar represents how many percent of votes each contestants as recorded</small> */}
+    <small className="text-light d-block mb-4">The bar represents how many percent of votes each contestants as recorded</small>
     <div className="d-flex flex-row flex-wrap justify-content-center">
     {nominee.map((details, index) => {
             return (
@@ -52,7 +52,7 @@ function Contestant({list}) {
                 <Card.Body>
                     <Card.Title className="text-capitalize">{details.name}</Card.Title>
                     <p>{details.institution.toUpperCase()}</p>
-                    {/* <ProgressBar className="mb-4" now={details.about}/> */}
+                    <ProgressBar className="mb-4" now={details.about}/>
                     <Button variant="primary" onClick={() => handleShow({name : details.name})}>
                     Vote Here
                     </Button>
