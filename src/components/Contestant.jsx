@@ -41,7 +41,7 @@ function Contestant({list}) {
       <Vote show={show} handleClose={handleClose} contestant={contestant} onChange={updateVote} onChang={updateEmail} collection={currentPerson}/>
    <div className="text-center py-5 bg-dark">
     <h2 className="text-light">Nominees</h2>
-  {//  <small className="text-light d-block mb-4">The bar represents how many percent of each contestants as recorded</small>}
+  {<small className="text-light d-block mb-4">Voting continues</small>}
     <div className="d-flex flex-row flex-wrap justify-content-center">
     {nominee.map((details, index) => {
             return (
