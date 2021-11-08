@@ -1,7 +1,7 @@
 import React from 'react'
 import { PaystackButton } from 'react-paystack'
 const Paystack = ({totalAmount, status, updateVote, Email}) => {
-    const publicKey = "pk_live_17bb05aac2a3b65313b93e812efb0f5aa5b005e4"
+    const publicKey = "pk_live_66f816e66ebecf5a3511d8b59192ddb773175dca"
     const amount = totalAmount
     const email = Email
 
