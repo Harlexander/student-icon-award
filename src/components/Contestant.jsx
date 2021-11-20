@@ -41,7 +41,7 @@ function Contestant({list}) {
       <Vote show={show} handleClose={handleClose} contestant={contestant} onChange={updateVote} onChang={updateEmail} collection={currentPerson}/>
    <div className="text-center py-5 bg-dark">
     <h2 className="text-light">Nominees</h2>
-  {<small className="text-light d-block mb-4">Voting continues</small>}
+  {<small className="text-light d-block mb-4">The voting progress</small>}
     <div className="d-flex flex-row flex-wrap justify-content-center">
     {nominee.map((details, index) => {
             return (
@@ -51,9 +51,9 @@ function Contestant({list}) {
                     </Card.Header>
                 <Card.Body>
                     <Card.Title className="text-capitalize">{details.name}</Card.Title>
+                    <ProgressBar className="mb-4" now={details.about}/> 
                     <p>{details.institution.toUpperCase()}</p>
-                   
-                    <Button variant="primary" onClick={() => handleShow({name : details.name})}>
+                    <Button disabled variant="primary" onClick={() => handleShow({name : details.name})}>
                     Vote Here
                     </Button>
                 </Card.Body>
