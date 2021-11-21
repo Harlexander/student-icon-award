@@ -51,9 +51,8 @@ function Contestant({list}) {
                     </Card.Header>
                 <Card.Body>
                     <Card.Title className="text-capitalize">{details.name}</Card.Title>
-                    <ProgressBar className="mb-4" now={details.about}/> 
                     <p>{details.institution.toUpperCase()}</p>
-                    <Button disabled variant="primary" onClick={() => handleShow({name : details.name})}>
+                    <Button  variant="primary" onClick={() => handleShow({name : details.name})}>
                     Vote Here
                     </Button>
                 </Card.Body>
