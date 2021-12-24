@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import Nomination from './pages/Nomination';
 import Reps from './pages/Reps';
 import Voting from './pages/Voting';
+import Tickets from './pages/Tickets';
+import Verify from './pages/Verify';
 
 function App() {
   const [data, setData] = useState([]);
@@ -48,6 +50,12 @@ function App() {
         </Route>
         <Route path="/representatives">
           <Reps/>
+        </Route>
+        <Route path="/tickets">
+          <Tickets/>
+        </Route>
+        <Route path="/verify/:id">
+          <Verify/>
         </Route>
       </Switch>
     </div>
