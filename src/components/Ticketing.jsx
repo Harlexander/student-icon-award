@@ -46,7 +46,7 @@ const Ticketing = () => {
                   </Fade>
                   <div className='row container mx-auto'>
                 <Card className='col-md-4 mb-5 bg-light p-0'>
-                    <Card.Img variant="bottom" onClick={() => show("2")} src="img/home.jpeg" onError={(e) => {e.target.onerror = null; e.target.src = "/img/coming.jpg"}}  className=""/>
+                    <Card.Img variant="bottom" onClick={() => show("2")} src="img/1.jpg" onError={(e) => {e.target.onerror = null; e.target.src = "/img/coming.jpg"}}  className=""/>
                     <Card.Body className='dropd' style={{display : visible != "2" && "none"}}>
                         <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -73,7 +73,7 @@ const Ticketing = () => {
                     </Card.Body>
                 </Card>
                 <Card className='col-md-4 mb-5 bg-light p-0'>
-                    <Card.Img variant="bottom" onClick={() => show("3")} src="img/home.jpeg" onError={(e) => {e.target.onerror = null; e.target.src = "/img/coming.jpg"}}  className=""/>
+                    <Card.Img variant="bottom" onClick={() => show("3")} src="img/2.jpg" onError={(e) => {e.target.onerror = null; e.target.src = "/img/coming.jpg"}}  className=""/>
                     <Card.Body className='dropd' style={{display : visible != "3" && "none"}}>
                         <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -101,7 +101,7 @@ const Ticketing = () => {
                     </Card.Body>
                 </Card>
                 <Card className='col-md-4 mb-5 bg-light p-0'>
-                    <Card.Img variant="bottom" onClick={() => show("1")} src="img/home.jpeg" onError={(e) => {e.target.onerror = null; e.target.src = "/img/coming.jpg"}}  className=""/>
+                    <Card.Img variant="bottom" onClick={() => show("1")} src="img/3.jpg" onError={(e) => {e.target.onerror = null; e.target.src = "/img/coming.jpg"}}  className=""/>
                     <Card.Body className='dropd' style={{display : visible != "1" && "none"}}>
                         <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">

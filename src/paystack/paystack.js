@@ -23,7 +23,7 @@ const Paystack = ({totalAmount, status, sold, Email}) => {
         publicKey,
         reference,
         metadata,
-        text: "Pay Now",
+        text: "Buy Ticket",
         onSuccess: ( reference ) => sold({message : true, price : (amount/100), ref : reference.reference})
   ,
         onClose: () => status({
