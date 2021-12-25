@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import { Page, Text, View, Image, Document, StyleSheet } from '@react-pdf/renderer';
-import { QRCode } from "react-qr-svg";
 import { useState } from 'react';
 // Create styles
 const styles = {
