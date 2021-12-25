@@ -39,9 +39,9 @@ const MyDocument = ({price, refs}) => {
       break;
   }
 
-  useEffect(() => {
-    setQr(document.getElementById('rttrtr').toDataURL());
-  }, [refs])
+  // useEffect(() => {
+  //   setQr(document.getElementById('rttrtr').toDataURL());
+  // }, [refs])
   return (
     <>
         {
@@ -50,7 +50,7 @@ const MyDocument = ({price, refs}) => {
               <Page size="A6" orientation="landscape">
                   <View style={styles.page} wrap={false}>
                   <Image style={styles.bg} src={img}/>
-                  <Image style={styles.qr} src={qr}/>
+                  {/* <Image style={styles.qr} src={qr}/> */}
                   </View>
               </Page>
             </Document>

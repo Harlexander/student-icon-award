@@ -130,7 +130,7 @@ const Ticketing = () => {
                 </Card>
                 </div>
                 </div>
-                <QrCode id={status.ref}/>
+                {/* <QrCode id={status.ref}/> */}
         </>
     )
 }
