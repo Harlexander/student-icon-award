@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import { Page, Text, View, Image, Document, StyleSheet } from '@react-pdf/renderer';
+import { QRCode } from "react-qr-svg";
 import { useState } from 'react';
 // Create styles
 const styles = {
@@ -38,9 +39,9 @@ const MyDocument = ({price, refs}) => {
       break;
   }
 
-  // useEffect(() => {
-  //   setQr(document.getElementById('rttrtr').toDataURL());
-  // }, [refs])
+  useEffect(() => {
+    setQr(document.getElementById('rttrtr').toDataURL());
+  }, [refs])
   return (
     <>
         {
@@ -49,7 +50,7 @@ const MyDocument = ({price, refs}) => {
               <Page size="A6" orientation="landscape">
                   <View style={styles.page} wrap={false}>
                   <Image style={styles.bg} src={img}/>
-                  {/* <Image style={styles.qr} src={qr}/> */}
+                  <Image style={styles.qr} src={qr}/>
                   </View>
               </Page>
             </Document>

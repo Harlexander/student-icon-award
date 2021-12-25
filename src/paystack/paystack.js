@@ -14,7 +14,7 @@ const Paystack = ({totalAmount, status, sold, Email}) => {
         var r = Math.floor(Math.random() * 9) + 1;
         if(arr.indexOf(r) === -1) arr.push(r);
     }
-    const unique  = arr.toString().replaceAll(",", "")
+    const unique  = arr.toString().replace(/,/g, '');
 
     const reference = "SIA"+ unique
     const componentProps = {
