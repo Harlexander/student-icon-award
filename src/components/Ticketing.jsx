@@ -70,6 +70,7 @@ const Ticketing = () => {
                                     <button onClick={() => window.location.reload()} className='ml-3 btn btn-info'> Buy Again!</button>
                                     </>
                         )}
+                        <i className="text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</i>
                     </Card.Body>
                 </Card>
                 <Card className='col-md-4 mb-5 bg-light p-0'>
@@ -98,6 +99,7 @@ const Ticketing = () => {
                                     </>
                         )}
 
+<i className="text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</i>
                     </Card.Body>
                 </Card>
                 <Card className='col-md-4 mb-5 bg-light p-0'>
@@ -126,6 +128,7 @@ const Ticketing = () => {
                                     </>
                         )}
 
+<i className="text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</i>
                     </Card.Body>
                 </Card>
                 </div>
