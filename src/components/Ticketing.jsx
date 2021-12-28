@@ -88,7 +88,8 @@ const Ticketing = () => {
                         </Form.Group>
                         </Form>
                         {!status.message && (<Paystack totalAmount={"500000"}  Email={info} sold={sold}/>)}
-
+                        
+                        <div>
                         {status.message && (
                                        <> <PDFDownloadLink className='btn btn-success' document={<MyDocument refs={status.ref} price={status.price} />} fileName="myticket.pdf">
                                         {({ loading }) =>
@@ -97,7 +98,9 @@ const Ticketing = () => {
                                     </PDFDownloadLink>
                                     <button onClick={() => window.location.reload()} className='ml-3 btn btn-info'> Buy Again!</button>
                                     </>
-                        )}
+                        )} 
+                        </div>
+                     
 
 <p className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</p>
                     </Card.Body>
