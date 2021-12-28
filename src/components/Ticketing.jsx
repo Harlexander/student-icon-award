@@ -70,7 +70,7 @@ const Ticketing = () => {
                                     <button onClick={() => window.location.reload()} className='ml-3 btn btn-info'> Buy Again!</button>
                                     </>
                         )}
-                        <i className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</i>
+                        <p className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</p>
                     </Card.Body>
                 </Card>
                 <Card className='col-md-4 mb-5 bg-light p-0'>
@@ -99,7 +99,7 @@ const Ticketing = () => {
                                     </>
                         )}
 
-<i className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</i>
+<p className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</p>
                     </Card.Body>
                 </Card>
                 <Card className='col-md-4 mb-5 bg-light p-0'>
@@ -128,7 +128,7 @@ const Ticketing = () => {
                                     </>
                         )}
 
-<i className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</i>
+<p className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</p>
                     </Card.Body>
                 </Card>
                 <Card className='col-md-4 mb-5 bg-light p-0'>
@@ -145,7 +145,7 @@ const Ticketing = () => {
                             <Form.Control onChange={updateInfo} name='email' value={info.email} type="email" placeholder="Email" />
                         </Form.Group>
                         </Form>
-                        {!status.message && (<Paystack totalAmount={"5000000"}  Email={info} sold={sold}/>)}
+                        {!status.message && (<Paystack totalAmount={"500000"}  Email={info} sold={sold}/>)}
 
                         {status.message && (
                                        <> <PDFDownloadLink className='btn btn-success' document={<MyDocument refs={status.ref} price={status.price} />} fileName="myticket.pdf">
@@ -157,7 +157,7 @@ const Ticketing = () => {
                                     </>
                         )}
 
-<i className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</i>
+<p className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</p>
                     </Card.Body>
                 </Card>
                 </div>
