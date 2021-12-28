@@ -34,6 +34,9 @@ const MyDocument = ({price, refs}) => {
     case 50000:
       img = "img/gold1.jpg"
       break;
+    case 5000:
+      img = "img/exclusive1.jpg"
+      break;
   
     default:
       img = "img/icons1.jpg"
