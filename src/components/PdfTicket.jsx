@@ -9,15 +9,16 @@ const styles = {
   },
   qr: {
 /* Rectangle 2 */
-  width: "110px",
-  height: "110px",
+  width: "133px",
+  height: "133px",
   position: "relative",
-  left : "270px",
-  top: "54px"
+  left : "444px",
+  top: "206px"
   },
+
   bg : {
     position : 'absolute',
-    height : "300px",
+    height : "595px",
     width  : "100%"
   }
 }
@@ -28,14 +29,14 @@ const MyDocument = ({price, refs}) => {
 
   switch (price) {
     case 100000:
-      img = "img/rer.jpg"
+      img = "img/platinum1.jpg"
       break;
     case 50000:
-      img = "img/gold.jpg"
+      img = "img/gold1.jpg"
       break;
   
     default:
-      img = "img/icon.jpg"
+      img = "img/icons1.jpg"
       break;
   }
 
@@ -47,7 +48,7 @@ const MyDocument = ({price, refs}) => {
         {
       refs && (
               <Document>
-              <Page size="A6" orientation="landscape">
+              <Page size="A4" orientation="landscape">
                   <View style={styles.page} wrap={false}>
                   <Image style={styles.bg} src={img}/>
                   <Image style={styles.qr} src={qr}/>
