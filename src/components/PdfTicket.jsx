@@ -55,6 +55,7 @@ const MyDocument = ({price, refs}) => {
   useEffect(() => {
     setQr(document.getElementById('rttrtr').toDataURL());
   }, [refs])
+  console.log(refs)
   return (
     <>
         {
@@ -64,7 +65,6 @@ const MyDocument = ({price, refs}) => {
                   <View style={styles.page} wrap={false}>
                   <Image style={styles.bg} src={img}/>
                   <Image style={styles.qr} src={qr}/>
-                  <Text style={styles.text}>S/N : {refs}</Text>
                   </View>
               </Page>
             </Document>
