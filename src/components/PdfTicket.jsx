@@ -20,6 +20,15 @@ const styles = {
     position : 'absolute',
     height : "595px",
     width  : "100%"
+  },
+  text : {
+    position: "absolute",
+    width:" 89px",
+    height:" 14px",
+    left: "453px",
+    top: "360px",
+    fontWeight: "normal",
+    fontSize: "12px"
   }
 }
 // Create Document Component
@@ -55,6 +64,7 @@ const MyDocument = ({price, refs}) => {
                   <View style={styles.page} wrap={false}>
                   <Image style={styles.bg} src={img}/>
                   <Image style={styles.qr} src={qr}/>
+                  <Text style={styles.text}>S/N : {refs}</Text>
                   </View>
               </Page>
             </Document>

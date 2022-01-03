@@ -10,7 +10,7 @@ const Paystack = ({totalAmount, status, sold, Email}) => {
     }
 
     var arr = [];
-    while(arr.length < 6){
+    while(arr.length < 8){
         var r = Math.floor(Math.random() * 9) + 1;
         if(arr.indexOf(r) === -1) arr.push(r);
     }

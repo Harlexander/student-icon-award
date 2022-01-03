@@ -100,8 +100,6 @@ const Ticketing = () => {
                                     </>
                         )} 
                         </div>
-                     
-
 <p className="d-block text-primary">Kindly Pay With Card Only. After payment download your Ticket to your device.</p>
                     </Card.Body>
                 </Card>
@@ -151,7 +149,7 @@ const Ticketing = () => {
                         {!status.message && (<Paystack totalAmount={"10000000"}  Email={info} sold={sold}/>)}
 
                         {status.message && (
-                                       <> <PDFDownloadLink className='btn btn-success' document={<MyDocument refs={status.ref} price={status.price} />} fileName="myticket.pdf">
+                                       <> <PDFDownloadLink className='btn btn-success' document={<MyDocument refs={status.ref} price={status.price} />} fileName="StudentIconAward.pdf">
                                         {({ loading }) =>
                                             loading ? 'Loading document...' : 'Download Ticket!'
                                         }
